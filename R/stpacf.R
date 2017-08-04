@@ -52,10 +52,8 @@ stpacf <- function(data, max.timelag = 15, wmatrices = list(NULL, ...), conf.lev
   p <- qplot(x = X1, 
              y = Values, 
              data = melt.df, 
-             fill = X2 , 
-             stat= "identity",
-             position = "identity", 
-             geom = "bar") + 
+             fill = X2)+
+    geom_bar(stat= "identity",position = "identity")+ 
     xlab(expression(bold("Time Lag"))) +
     ylab(expression(bold("Space-Time Partial Autocorrelation"))) +
     geom_hline(

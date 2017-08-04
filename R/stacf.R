@@ -117,13 +117,11 @@ stacf <- function(data, max.timelag = 15, wmatrices = list(NULL, ...), conf.leve
   
   ciline <- qnorm((1L - conf.level)/2L)/sqrt(ncol(data))
   
-  p <- qplot(x = X1, 
-             y = Values, 
-             data = melt.df, 
-             fill = X2 , 
-             stat= "identity",
-             position = "identity", 
-             geom = "bar") + 
+  p <- qplot( x = X1, 
+              y = Values, 
+              data = melt.df,
+              fill = X2)+
+    geom_bar(stat= "identity",position = "identity")+ 
     xlab(expression(bold("Time Lag"))) +
     ylab(expression(bold("Space-Time Autocorrelation"))) +
     geom_hline(

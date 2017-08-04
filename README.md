@@ -9,12 +9,13 @@ Installation
 ```{coffee}
 if (!require("devtools"))
   install.packages("devtools")
-devtools::install_github("stcor", "alstat")
+devtools::install_github("stcor2", "apipdlani")
 ```
 
 Author/Maintainer
 -----
 Al-Ahmadgaid Asaad (alstated@gmail.com)
+Apip ramdlani(apipdlani@gmail.com)
 
 Note
 -----
